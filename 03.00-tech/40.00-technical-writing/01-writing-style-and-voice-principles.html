@@ -1,0 +1,3016 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Dario Airoldi">
+<meta name="dcterms.date" content="2026-01-14">
+<meta name="description" content="Comprehensive guide to writing style, voice, and tone in technical documentation, comparing Microsoft, Google, and Wikipedia approaches with practical before/after examples">
+
+<title>Writing Style and Voice Principles – Diginsight Team Knowledge Journey</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../03.00-tech/40.00-technical-writing/02-structure-and-information-architecture.html" rel="next">
+<link href="../../03.00-tech/40.00-technical-writing/00-foundations-of-technical-documentation.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-3a62b57c7ce0f47a491e97fb1cd0ccc4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Knowledge Hub</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../README.html" aria-current="page"> <i class="bi bi-house-fill" role="img">
+</i> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-news" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">News</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-news">    
+        <li class="dropdown-header">Latest Updates</li>
+        <li>
+    <a class="dropdown-item" href="../../01.00-news/20260130-6-advanced-rules-for-production-copilot-agents/summary.html">
+ <span class="dropdown-text">6 Advanced Rules for Copilot Agents</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../01.00-news/20260124-copilotstudio-sdk/github-copilot-sdk-building-agents-for-any-application.html">
+ <span class="dropdown-text">GitHub Copilot SDK - Building Agents</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../01.00-news/20260111-6-vital-rules-for-production-ready-copilot-agents/summary.html">
+ <span class="dropdown-text">6 VITAL Rules for Copilot Agents</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../01.00-news/20251224-vscode-v1.107-release/01-summary.html">
+ <span class="dropdown-text">VS Code v1.107 Release Summary</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../01.00-news/20251224-vscode-v1.107-release/02-readme.sonnet4.html">
+ <span class="dropdown-text">VS Code v1.107 Release Analysis</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-events" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Events</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-events">    
+        <li class="dropdown-header">No events currently available</li>
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Event content coming soon…</li>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-architectures" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Architectures</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-architectures">    
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/21.01-feed/20251005-feeds-architectures-and-protocols/01-podcast-and-rss-feed-information-gathering-and-analysis.html">
+ <span class="dropdown-text">Podcast and RSS Feed Analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/21.01-feed/20251005-feeds-architectures-and-protocols/02-analyzing-atom-and-rss-specifications.html">
+ <span class="dropdown-text">Analyzing Atom and RSS Specifications</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/21.01-feed/20251005-feeds-architectures-and-protocols/03-additional-metadata-for-rss-and-atom-feeds.html">
+ <span class="dropdown-text">Additional Metadata for RSS and Atom Feeds</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/21.01-feed/20251005-feeds-architectures-and-protocols/04-c#-reference-classes-for-reading-feeds.html">
+ <span class="dropdown-text">C# Reference Classes for Reading Feeds</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-azure" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Azure</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-azure">    
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/02.01-azure/00-azure-naming-conventions/readme.html">
+ <span class="dropdown-text">Azure Best Practices</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Security &amp; Identity</li>
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/01.01-authentication/20251102-authenticating-external-users-in-azure-ad/01-external-users-authentication-in-azure-ad-explained.html">
+ <span class="dropdown-text">Azure AD External Users Explained</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/01.01-authentication/20251102-authenticating-external-users-in-azure-ad/02-external-users-types-and-invitation-process.html">
+ <span class="dropdown-text">External Users Types &amp; Invitation</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Data Services</li>
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/03.01-data/01-table-storage-access-options/readme.html">
+ <span class="dropdown-text">Table Storage Access</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/03.01-data/03-blob-storage-access-options/01-blob-storage-access-options.html">
+ <span class="dropdown-text">Blob Storage Access Options</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/03.01-data/03-blob-storage-access-options/02-blob-storage-limitations.html">
+ <span class="dropdown-text">Blob Storage Limitations</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/03.01-data/02-cosmosdb-access-options/01-azure-cosmosdb-access-options.html">
+ <span class="dropdown-text">CosmosDB Access</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-markdown--docs" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Markdown &amp; Docs</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-markdown--docs">    
+        <li class="dropdown-header">Quarto Documentation</li>
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/20.01-markdown/01-quarto/01.01-introduction-to-quarto.html">
+ <span class="dropdown-text">Using Quarto (Overview)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/20.01-markdown/01-quarto/01.02-how-quarto-works.html">
+ <span class="dropdown-text">Quarto Architecture: How It Works</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/20.01-markdown/01-quarto/02.01-monolithic-vs-modular-deployment.html">
+ <span class="dropdown-text">Quarto: Monolithic vs.&nbsp;Modular Deployment</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/20.01-markdown/01-quarto/02.02-split-navigation-build.html">
+ <span class="dropdown-text">Quarto: Split Navigation Build</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/20.01-markdown/01-quarto/03.01-quarto-yml-structure.html">
+ <span class="dropdown-text">Quarto.yml Document Structure</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/20.01-markdown/01-quarto/05.01-theming-and-styling.html">
+ <span class="dropdown-text">Quarto Theming and Styling</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/20.01-markdown/01-quarto/04.01-markdown-features.html">
+ <span class="dropdown-text">Quarto-Specific Markdown Features</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/20.01-markdown/01-quarto/07.01-build-optimization.html">
+ <span class="dropdown-text">Optimizing Quarto Build &amp; Deploy</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/20.01-markdown/01-quarto/06.01-sidebar-layout.html">
+ <span class="dropdown-text">How Quarto Sidebar Works</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/20.01-markdown/01-quarto/06.02-navigation-workflow.html">
+ <span class="dropdown-text">Quarto Navigation Workflow</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/20.01-markdown/01-quarto/06.03-transition-optimization.html">
+ <span class="dropdown-text">Sidebar Page Transition Optimization</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/20.01-markdown/01-quarto/08.01-troubleshooting-guide.html">
+ <span class="dropdown-text">Troubleshooting Quarto Sites</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/20.01-markdown/01-quarto/09.01-github-pages-deployment.html">
+ <span class="dropdown-text">Deploying Quarto to GitHub Pages</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/20.01-markdown/01-quarto/09.02-azure-storage-deployment.html">
+ <span class="dropdown-text">Deploying Quarto to Azure Storage</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/20.01-markdown/01-quarto/10.01-customizing-markdown-rendering-with-lua-filters.html">
+ <span class="dropdown-text">Customizing with Lua Filters</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">MkDocs Documentation</li>
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/20.01-markdown/02-mkdocs/000.000-using-mkdocs.html">
+ <span class="dropdown-text">Using MkDocs (Overview)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/20.01-markdown/02-mkdocs/001.001-architecture-how-mkdocs-works.html">
+ <span class="dropdown-text">MkDocs Architecture: How It Works</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/20.01-markdown/02-mkdocs/001.002-architecture-monolithic-vs.-modular-deployment.html">
+ <span class="dropdown-text">MkDocs: Monolithic vs.&nbsp;Modular Deployment</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Hugo Documentation</li>
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/20.01-markdown/03-hugo/readme.html">
+ <span class="dropdown-text">Hugo Series Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/20.01-markdown/03-hugo/01.01-introduction-to-hugo.html">
+ <span class="dropdown-text">Introduction to Hugo</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/20.01-markdown/03-hugo/01.02-hugo-core-concepts.html">
+ <span class="dropdown-text">Hugo Core Concepts</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/20.01-markdown/03-hugo/01.03-goldmark-markdown-processing.html">
+ <span class="dropdown-text">Goldmark Markdown Processing</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/20.01-markdown/03-hugo/01.04-hugo-vs-quarto.html">
+ <span class="dropdown-text">Hugo vs Quarto Comparison</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/20.01-markdown/03-hugo/05.03-rendering-learning-hub-with-hugo.html">
+ <span class="dropdown-text">Rendering Learning Hub with Hugo</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-technologies" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Technologies</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-technologies">    
+        <li class="dropdown-header">GitHub &amp; Version Control</li>
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/05.01-github/01.01-cli/20250709-manage-gitrepo-from-commandline/readme.html">
+ <span class="dropdown-text">Git Command Line</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/05.01-github/01.01-cli/20250118-github-cli/cli-commands-for-github.html">
+ <span class="dropdown-text">GitHub CLI Commands</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Prompt Engineering</li>
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/05.02-prompt-engineering/03.00-how_to_structure_content_for_copilot_prompt_files.html">
+ <span class="dropdown-text">Structuring Prompt Files</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/05.02-prompt-engineering/04.00-how_to_structure_content_for_copilot_agent_files.html">
+ <span class="dropdown-text">Structuring Agent Files</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/05.02-prompt-engineering/05.00-how_to_structure_content_for_copilot_instruction_files.html">
+ <span class="dropdown-text">Structuring Instruction Files</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/05.02-prompt-engineering/06.00-how_to_structure_content_for_copilot_skills.html">
+ <span class="dropdown-text">Structuring Skill Files</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/05.02-prompt-engineering/07.00-how_to_create_mcp_servers_for_copilot.html">
+ <span class="dropdown-text">Creating MCP Servers</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/05.02-prompt-engineering/08.00-how_to_optimize_prompts_for_specific_models.html">
+ <span class="dropdown-text">Optimizing Prompts for Models</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/05.02-prompt-engineering/09.00-how_to_manage_information_flow_during_prompt_orchestrations.html">
+ <span class="dropdown-text">Managing Information Flow</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/05.02-prompt-engineering/20-how_to_create_a_prompt_interacting_with_agents.html">
+ <span class="dropdown-text">Prompt Orchestrations with Agents</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Technical Writing</li>
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/40.00-technical-writing/00-foundations-of-technical-documentation.html">
+ <span class="dropdown-text">Foundations of Technical Docs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/40.00-technical-writing/microsoft-writing-style-guide/00-microsoft-style-guide-overview.html">
+ <span class="dropdown-text">Microsoft Style Guide</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">API Testing &amp; Tools</li>
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/10.01-httpclient/20250713-use-http-files-for-easy-and-repeatable-test/00-http-rest-api-testing-tools-comprehensive-comparison.html">
+ <span class="dropdown-text">HTTP/REST API Testing Comparison</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/10.01-httpclient/20250713-use-http-files-for-easy-and-repeatable-test/readme.html">
+ <span class="dropdown-text">Using .http Files (VSCode)</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Programming &amp; Hardware</li>
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/04.01-programming-languages/20250827-what-is-yq-overview/readme.html">
+ <span class="dropdown-text">yq YAML Processor</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../03.00-tech/60.01-hardware/surface-laptop-6-features-analysis.html">
+ <span class="dropdown-text">Surface Laptop 6</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-how-to-guides" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">How-To Guides</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-how-to-guides">    
+        <li>
+    <a class="dropdown-item" href="../../04.00-howto/20251108-howto-configure-promot-files-for-markdown-preview-in-visual-studio.html">
+ <span class="dropdown-text">Configure .prompt Files in VS</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../04.00-howto/20251013-howto-expose-my-computer-with-no-ip-ddns/howto.expose-my-computer-with-no-ip-ddns.html">
+ <span class="dropdown-text">No-IP DDNS Setup</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ideas--projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Ideas &amp; Projects</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-ideas--projects">    
+        <li>
+    <a class="dropdown-item" href="../../06.00-idea/learning-hub/01-learning-hub-overview/01-learning-hub-introduction.html">
+ <span class="dropdown-text">Knowledge Hub Overview</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../#"> <i class="bi bi-bell-fill" role="img" aria-label="Intelligent Notifications">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../#"> <i class="bi bi-rss" role="img" aria-label="Intelligent Feeds">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../#"> <i class="bi bi-sliders" role="img" aria-label="Intelligent Rules">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/darioairoldi/Learn"> <i class="bi bi-github" role="img" aria-label="GitHub Repository">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Technologies</li><li class="breadcrumb-item"><a href="../../03.00-tech/40.00-technical-writing/00-foundations-of-technical-documentation.html">Technical Writing</a></li><li class="breadcrumb-item"><a href="../../03.00-tech/40.00-technical-writing/01-writing-style-and-voice-principles.html">Writing Style &amp; Voice</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../README.html" class="sidebar-item-text sidebar-link"><i class="bi bi-house-fill" role="img">
+</i> 
+ <span class="menu-text">Home</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../06.00-idea/learning-hub/01-learning-hub-overview/01-learning-hub-introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Learning Hub &amp; Knowledge Hub Concepts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../06.00-idea/learning-hub/01-learning-hub-overview/02-using-learning-hub-for-learning-technologies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using Learning Hub for Learning Technologies</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true"><i class="bi bi-newspaper" role="img">
+</i> 
+ <span class="menu-text">News &amp; Updates</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../01.00-news/20260130-6-advanced-rules-for-production-copilot-agents/summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">20260130 - 6 Advanced Rules For Production Copilot Agents</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../01.00-news/20260124-copilotstudio-sdk/github-copilot-sdk-building-agents-for-any-application.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">20260124 - GitHub Copilot SDK Building Agents</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../01.00-news/20260111-6-vital-rules-for-production-ready-copilot-agents/summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">20260111 - 6 Vital Rules For Production Ready Copilot Agents</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">20251224 VS Code v1.107 Release</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../01.00-news/20251224-vscode-v1.107-release/01-summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../01.00-news/20251224-vscode-v1.107-release/02-readme.sonnet4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Analysis</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true"><i class="bi bi-calendar-event" role="img">
+</i> 
+ <span class="menu-text">Events</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">No events currently available</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true"><i class="bi bi-cpu" role="img">
+</i> 
+ <span class="menu-text">Technologies</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true"><i class="bi bi-shield-lock" role="img">
+</i> 
+ <span class="menu-text">Authentication</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">20251102 Authenticating External Users in Azure Ad</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/01.01-authentication/20251102-authenticating-external-users-in-azure-ad/01-external-users-authentication-in-azure-ad-explained.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">External Users Authentication in Azure AD Explained</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/01.01-authentication/20251102-authenticating-external-users-in-azure-ad/02-external-users-types-and-invitation-process.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">External User Types and Invitation Process in Azure AD/Entra ID</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true"><i class="bi bi-cloud" role="img">
+</i> 
+ <span class="menu-text">Azure</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/02.01-azure/00-azure-naming-conventions/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Azure Naming Conventions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true"><i class="bi bi-database" role="img">
+</i> 
+ <span class="menu-text">Data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">01 Table Storage Access Options</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/03.01-data/01-table-storage-access-options/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Azure Table Storage Access with C#</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">02 Cosmosdb Access Options</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/03.01-data/02-cosmosdb-access-options/01-azure-cosmosdb-access-options.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🌐 Azure CosmosDB Access Options (with C#)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/03.01-data/02-cosmosdb-access-options/02-cosmosdb-partitioning-strategies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🎯 CosmosDB Partitioning Strategies</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+ <span class="menu-text">03 Blob Storage Access Options</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/03.01-data/03-blob-storage-access-options/01-blob-storage-access-options.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Azure Blob Storage Access Approaches with C#</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/03.01-data/03-blob-storage-access-options/02-blob-storage-limitations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⚠️ Azure Blob Storage Limitations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true"><i class="bi bi-code-slash" role="img">
+</i> 
+ <span class="menu-text">Programming Languages</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
+ <span class="menu-text">20250827 What Is Yq Overview</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/04.01-programming-languages/20250827-what-is-yq-overview/appendix-advanced-techniques.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Appendix B: Advanced YAML to JSON Conversion Techniques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/04.01-programming-languages/20250827-what-is-yq-overview/appendix-yq-tool.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Appendix A: The yq Tool - Complete Guide</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/04.01-programming-languages/20250827-what-is-yq-overview/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to Convert YAML to JSON - Complete Guide</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text">GitHub</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
+ <span class="menu-text">01 Repositories</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false">
+ <span class="menu-text">20250825 Github Repositories Limitations</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth4 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/05.01-github/01-repositories/20250825-github-repositories-limitations/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overcoming GitHub Repository Limitations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false">
+ <span class="menu-text">01.01 Cli</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false">
+ <span class="menu-text">20250118 Github Cli</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth4 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/05.01-github/01.01-cli/20250118-github-cli/cli-commands-for-github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🚀 CLI Commands to Interact with GitHub Repositories</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false">
+ <span class="menu-text">20250709 Manage Gitrepo from Commandline</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth4 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/05.01-github/01.01-cli/20250709-manage-gitrepo-from-commandline/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HowTo: Manage your Git repo from the command line</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" role="navigation" aria-expanded="false">
+ <span class="menu-text">02 Actions</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" role="navigation" aria-expanded="false">
+ <span class="menu-text">20251018 Issue Github Action Fails with Artifact Storage Quota Has Been Hit</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth4 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/05.01-github/02-actions/20251018-issue-github-action-fails-with-artifact-storage-quota-has-been-hit/01-readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ISSUE: Github action fails with ‘Artifact storage quota has been hit’</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/05.01-github/02-actions/20251018-issue-github-action-fails-with-artifact-storage-quota-has-been-hit/02-quickstart.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quick Start Guide - Fixing Artifact Storage Quota Issue</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/05.01-github/02-actions/20251018-issue-github-action-fails-with-artifact-storage-quota-has-been-hit/03-solution_summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary - GitHub Actions Artifact Storage Quota Issue</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/05.01-github/02-actions/20251018-issue-github-action-fails-with-artifact-storage-quota-has-been-hit/05-final_solution_no_artifacts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FINAL SOLUTION: No Artifacts Approach</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/05.01-github/02-actions/20251018-issue-github-action-fails-with-artifact-storage-quota-has-been-hit/99-wsl_error_fix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">WSL Error Fix - Updated Solution</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" role="navigation" aria-expanded="true"><i class="bi bi-chat-dots" role="img">
+</i> 
+ <span class="menu-text">Prompt Engineering</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/05.02-prompt-engineering/02.00-how_to_name_and_organize_prompt_files.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to Name and Organize Prompt Files in Your GitHub Repository</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/05.02-prompt-engineering/03.00-how_to_structure_content_for_copilot_prompt_files.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to Structure Content for GitHub Copilot Prompt Files</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/05.02-prompt-engineering/04.00-how_to_structure_content_for_copilot_agent_files.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to Structure Content for GitHub Copilot Agent Files</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/05.02-prompt-engineering/05.00-how_to_structure_content_for_copilot_instruction_files.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to Structure Content for GitHub Copilot Instruction Files</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/05.02-prompt-engineering/06.00-how_to_structure_content_for_copilot_skills.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to Structure Content for GitHub Copilot Skills</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/05.02-prompt-engineering/07.00-how_to_create_mcp_servers_for_copilot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to Create MCP Servers for GitHub Copilot</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/05.02-prompt-engineering/08.00-how_to_optimize_prompts_for_specific_models.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to Optimize Prompts for Specific Models</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/05.02-prompt-engineering/08.01-appendix_openai_prompting_guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Appendix 01: OpenAI Models Prompting Guide Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/05.02-prompt-engineering/08.02-appendix_anthropic_prompting_guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Appendix 02: Anthropic Claude Prompting Guide Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/05.02-prompt-engineering/08.03-appendix_google_prompting_guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Appendix 03: Google Gemini Prompting Guide Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/05.02-prompt-engineering/09.00-how_to_manage_information_flow_during_prompt_orchestrations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to Manage Information Flow During Prompt Orchestrations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/05.02-prompt-engineering/10.00-how_to_optimize_token_consumption_during_prompt_orchestrations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to Optimize Token Consumption During Prompt Orchestrations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/05.02-prompt-engineering/20-how_to_create_a_prompt_interacting_with_agents.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to Create a Prompt Orchestrating Multiple Agents</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/05.02-prompt-engineering/21.1-example_prompt_interacting_with_agents_plan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Multi-Agent Orchestration Plan V2 for Prompt and Agent File Creation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/05.02-prompt-engineering/22-prompts-and-markdown-structure-for-a-documentation-site.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prompts and Markdown Structure for a Documentation Site</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" role="navigation" aria-expanded="false">
+ <span class="menu-text">02 Getting Started</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-23" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/05.02-prompt-engineering/02-getting-started/01.00-how_github_copilot_uses_markdown_and_prompt_folders.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How GitHub Copilot Uses Markdown and Prompt Folders within Your Repo</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" role="navigation" aria-expanded="true"><i class="bi bi-plug" role="img">
+</i> 
+ <span class="menu-text">HTTP Client</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" role="navigation" aria-expanded="false">
+ <span class="menu-text">20250711 Use Http Files for Easy and Repeatable Test</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-25" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/10.01-httpclient/20250711-use-http-files-for-easy-and-repeatable-test/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Readme</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" role="navigation" aria-expanded="false">
+ <span class="menu-text">20250713 Use Http Files for Easy and Repeatable Test</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-26" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/10.01-httpclient/20250713-use-http-files-for-easy-and-repeatable-test/00-http-rest-api-testing-tools-comprehensive-comparison.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🔍 HTTP/REST API Testing Tools - Comprehensive Comparison</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/10.01-httpclient/20250713-use-http-files-for-easy-and-repeatable-test/02-using-http-files-for-api-testing-(visual-studio).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using HTTP Files for API Testing (Visual Studio)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/10.01-httpclient/20250713-use-http-files-for-easy-and-repeatable-test/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Readme</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-27" role="navigation" aria-expanded="true"><i class="bi bi-book" role="img">
+</i> 
+ <span class="menu-text">Markdown Compilers</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-27" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-27" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" role="navigation" aria-expanded="false"><i class="bi bi-file-richtext" role="img">
+</i> 
+ <span class="menu-text">Quarto</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-28" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/01-quarto/01.01-introduction-to-quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using Quarto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/01-quarto/01.02-how-quarto-works.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How Quarto Works</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/01-quarto/02.01-monolithic-vs-modular-deployment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Monolithic vs.&nbsp;Modular Deployment</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/01-quarto/02.02-split-navigation-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Split Navigation Build from Content Rendering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/01-quarto/03.01-quarto-yml-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">_quarto.yml Document Structure</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/01-quarto/04.01-markdown-features.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quarto-Specific Markdown Features</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/01-quarto/05.01-theming-and-styling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quarto Theming and Styling</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/01-quarto/06.01-sidebar-layout.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How does quarto site layout works</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/01-quarto/06.02-navigation-workflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Navbars Navigation Workflow</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/01-quarto/06.03-transition-optimization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sidebar Page Transition Optimization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/01-quarto/07.01-build-optimization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Optimizing Quarto Build and Deploy Performance</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/01-quarto/08.01-troubleshooting-guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Troubleshooting Quarto Sites</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/01-quarto/09.01-github-pages-deployment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Deploying a Quarto Site to GitHub Pages</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/01-quarto/09.02-azure-storage-deployment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Deploying a Quarto Site to Azure Storage Accounts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/01-quarto/10.01-customizing-markdown-rendering-with-lua-filters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Customizing Markdown Rendering with Lua Filters</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/01-quarto/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quarto Documentation Series</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-29" role="navigation" aria-expanded="false"><i class="bi bi-book-half" role="img">
+</i> 
+ <span class="menu-text">MkDocs</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-29" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-29" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/02-mkdocs/000.000-using-mkdocs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using MkDocs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/02-mkdocs/001.001-architecture-how-mkdocs-works.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MkDocs Architecture - How MkDocs Works</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/02-mkdocs/001.002-architecture-monolithic-vs.-modular-deployment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MkDocs Architecture - Monolithic vs.&nbsp;Modular Deployment</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-30" role="navigation" aria-expanded="false"><i class="bi bi-lightning-charge" role="img">
+</i> 
+ <span class="menu-text">Hugo</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-30" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-30" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/03-hugo/01.01-introduction-to-hugo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Hugo Static Site Generator</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/03-hugo/01.02-hugo-core-concepts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hugo Core Concepts: Content Organization and Management</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/03-hugo/01.03-goldmark-markdown-processing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Goldmark Markdown Processing in Hugo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/03-hugo/01.04-hugo-vs-quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hugo vs Quarto: Comprehensive Comparison for Learning Hub</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/03-hugo/05.03-rendering-learning-hub-with-hugo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rendering Learning Hub with Hugo: Practical Implementation Guide</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/20.01-markdown/03-hugo/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hugo Static Site Generator Series</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-31" role="navigation" aria-expanded="true"><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text">Feed Architectures &amp; Protocols</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-31" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-31" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-32" role="navigation" aria-expanded="false">
+ <span class="menu-text">20251005 Feeds Architectures and Protocols</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-32" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-32" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/21.01-feed/20251005-feeds-architectures-and-protocols/01-podcast-and-rss-feed-information-gathering-and-analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Podcast and RSS Feed: Information Gathering and Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/21.01-feed/20251005-feeds-architectures-and-protocols/02-analyzing-atom-and-rss-specifications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Analyzing Atom and RSS Specifications</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/21.01-feed/20251005-feeds-architectures-and-protocols/03-additional-metadata-for-rss-and-atom-feeds.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Additional Metadata for RSS and Atom Feeds</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/21.01-feed/20251005-feeds-architectures-and-protocols/04-c#-reference-classes-for-reading-feeds.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">C# Reference Classes for Reading RSS and Atom Feeds</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-33" role="navigation" aria-expanded="true"><i class="bi bi-cpu-fill" role="img">
+</i> 
+ <span class="menu-text">Hardware</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-33" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-33" class="collapse list-unstyled sidebar-section depth2 show">  
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-34" role="navigation" aria-expanded="true"><i class="bi bi-pencil-square" role="img">
+</i> 
+ <span class="menu-text">Technical Writing</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-34" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-34" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/40.00-technical-writing/00-foundations-of-technical-documentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Foundations &amp; Principles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/40.00-technical-writing/01-writing-style-and-voice-principles.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Writing Style &amp; Voice</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/40.00-technical-writing/02-structure-and-information-architecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Structure &amp; Architecture</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/40.00-technical-writing/03-accessibility-in-technical-writing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Accessibility</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/40.00-technical-writing/04-code-documentation-excellence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Code Documentation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/40.00-technical-writing/05-validation-and-quality-assurance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Validation &amp; QA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/40.00-technical-writing/06-citations-and-reference-management.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Citations &amp; References</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/40.00-technical-writing/07-ai-enhanced-documentation-writing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">AI-Enhanced Writing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-35" role="navigation" aria-expanded="false"><i class="bi bi-microsoft" role="img">
+</i> 
+ <span class="menu-text">microsoft-writing-style-guide</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-35" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-35" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/40.00-technical-writing/microsoft-writing-style-guide/00-microsoft-style-guide-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview &amp; Philosophy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/40.00-technical-writing/microsoft-writing-style-guide/01-microsoft-voice-and-tone.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Voice &amp; Tone</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/40.00-technical-writing/microsoft-writing-style-guide/02-microsoft-mechanics-and-formatting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mechanics &amp; Formatting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/40.00-technical-writing/microsoft-writing-style-guide/03-microsoft-compared-to-other-guides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Comparative Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03.00-tech/40.00-technical-writing/microsoft-writing-style-guide/04-microsoft-style-principles-reference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Principles Reference (YAML/JSON)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-36" role="navigation" aria-expanded="true"><i class="bi bi-tools" role="img">
+</i> 
+ <span class="menu-text">How-To Guides</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-36" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-36" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../04.00-howto/20251108-howto-configure-promot-files-for-markdown-preview-in-visual-studio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HowTo: Configure .prompt Files for Markdown Preview in Visual Studio</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-37" role="navigation" aria-expanded="true">
+ <span class="menu-text">20251013 Howto Expose My Computer with No Ip Ddns</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-37" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-37" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../04.00-howto/20251013-howto-expose-my-computer-with-no-ip-ddns/howto.expose-my-computer-with-no-ip-ddns.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🌐 HowTo: Expose My Computer with No-IP DDNS</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-38" role="navigation" aria-expanded="true"><i class="bi bi-lightbulb" role="img">
+</i> 
+ <span class="menu-text">Ideas &amp; Projects</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-38" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-38" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-39" role="navigation" aria-expanded="true"><i class="bi bi-book-half" role="img">
+</i> 
+ <span class="menu-text">Knowledge Hub</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-39" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-39" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-40" role="navigation" aria-expanded="false">
+ <span class="menu-text">01 Learning Hub Overview</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-40" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-40" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../06.00-idea/learning-hub/01-learning-hub-overview/01-learning-hub-introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Learning Hub &amp; Knowledge Hub Concepts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../06.00-idea/learning-hub/01-learning-hub-overview/02-using-learning-hub-for-learning-technologies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using Learning Hub for Learning Technologies</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-41" role="navigation" aria-expanded="false">
+ <span class="menu-text">02 Documentation Taxonomy</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-41" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-41" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../06.00-idea/learning-hub/02-documentation-taxonomy/01-learning-hub-documentation-taxonomy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Learning Hub &amp; Knowledge Hub Documentation Taxonomy</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#writing-style-and-voice-principles" id="toc-writing-style-and-voice-principles" class="nav-link active" data-scroll-target="#writing-style-and-voice-principles">Writing Style and Voice Principles</a>
+  <ul class="collapse">
+  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link" data-scroll-target="#table-of-contents">Table of Contents</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#active-vs.-passive-voice" id="toc-active-vs.-passive-voice" class="nav-link" data-scroll-target="#active-vs.-passive-voice">Active vs.&nbsp;Passive Voice</a>
+  <ul class="collapse">
+  <li><a href="#definitions-and-examples" id="toc-definitions-and-examples" class="nav-link" data-scroll-target="#definitions-and-examples">Definitions and Examples</a></li>
+  <li><a href="#when-to-use-active-voice" id="toc-when-to-use-active-voice" class="nav-link" data-scroll-target="#when-to-use-active-voice">When to Use Active Voice</a></li>
+  <li><a href="#when-passive-voice-is-acceptable" id="toc-when-passive-voice-is-acceptable" class="nav-link" data-scroll-target="#when-passive-voice-is-acceptable">When Passive Voice Is Acceptable</a></li>
+  <li><a href="#style-guide-comparison-voice-usage" id="toc-style-guide-comparison-voice-usage" class="nav-link" data-scroll-target="#style-guide-comparison-voice-usage">Style Guide Comparison: Voice Usage</a></li>
+  <li><a href="#beforeafter-examples" id="toc-beforeafter-examples" class="nav-link" data-scroll-target="#beforeafter-examples">Before/After Examples</a></li>
+  <li><a href="#detecting-passive-voice" id="toc-detecting-passive-voice" class="nav-link" data-scroll-target="#detecting-passive-voice">Detecting Passive Voice</a></li>
+  </ul></li>
+  <li><a href="#readability-formulas-explained" id="toc-readability-formulas-explained" class="nav-link" data-scroll-target="#readability-formulas-explained">Readability Formulas Explained</a>
+  <ul class="collapse">
+  <li><a href="#flesch-reading-ease-score" id="toc-flesch-reading-ease-score" class="nav-link" data-scroll-target="#flesch-reading-ease-score">Flesch Reading Ease Score</a></li>
+  <li><a href="#flesch-kincaid-grade-level" id="toc-flesch-kincaid-grade-level" class="nav-link" data-scroll-target="#flesch-kincaid-grade-level">Flesch-Kincaid Grade Level</a></li>
+  <li><a href="#gunning-fog-index" id="toc-gunning-fog-index" class="nav-link" data-scroll-target="#gunning-fog-index">Gunning Fog Index</a></li>
+  <li><a href="#why-readability-matters-cognitive-load" id="toc-why-readability-matters-cognitive-load" class="nav-link" data-scroll-target="#why-readability-matters-cognitive-load">Why Readability Matters: Cognitive Load</a></li>
+  <li><a href="#readability-formula-limitations" id="toc-readability-formula-limitations" class="nav-link" data-scroll-target="#readability-formula-limitations">Readability Formula Limitations</a></li>
+  </ul></li>
+  <li><a href="#sentence-structure-and-length" id="toc-sentence-structure-and-length" class="nav-link" data-scroll-target="#sentence-structure-and-length">Sentence Structure and Length</a>
+  <ul class="collapse">
+  <li><a href="#why-15-25-words" id="toc-why-15-25-words" class="nav-link" data-scroll-target="#why-15-25-words">Why 15-25 Words?</a></li>
+  <li><a href="#sentence-type-distribution" id="toc-sentence-type-distribution" class="nav-link" data-scroll-target="#sentence-type-distribution">Sentence Type Distribution</a></li>
+  <li><a href="#beforeafter-sentence-length-optimization" id="toc-beforeafter-sentence-length-optimization" class="nav-link" data-scroll-target="#beforeafter-sentence-length-optimization">Before/After: Sentence Length Optimization</a></li>
+  </ul></li>
+  <li><a href="#voice-guidelines-microsoft-vs.-google-vs.-wikipedia" id="toc-voice-guidelines-microsoft-vs.-google-vs.-wikipedia" class="nav-link" data-scroll-target="#voice-guidelines-microsoft-vs.-google-vs.-wikipedia">Voice Guidelines: Microsoft vs.&nbsp;Google vs.&nbsp;Wikipedia</a>
+  <ul class="collapse">
+  <li><a href="#microsoft-writing-style-guide-approach" id="toc-microsoft-writing-style-guide-approach" class="nav-link" data-scroll-target="#microsoft-writing-style-guide-approach">Microsoft Writing Style Guide Approach</a></li>
+  <li><a href="#google-developer-documentation-approach" id="toc-google-developer-documentation-approach" class="nav-link" data-scroll-target="#google-developer-documentation-approach">Google Developer Documentation Approach</a></li>
+  <li><a href="#wikipedia-manual-of-style-approach" id="toc-wikipedia-manual-of-style-approach" class="nav-link" data-scroll-target="#wikipedia-manual-of-style-approach">Wikipedia Manual of Style Approach</a></li>
+  <li><a href="#comparison-table-voice-across-style-guides" id="toc-comparison-table-voice-across-style-guides" class="nav-link" data-scroll-target="#comparison-table-voice-across-style-guides">Comparison Table: Voice Across Style Guides</a></li>
+  </ul></li>
+  <li><a href="#person-usage-first-second-third" id="toc-person-usage-first-second-third" class="nav-link" data-scroll-target="#person-usage-first-second-third">Person Usage (First, Second, Third)</a>
+  <ul class="collapse">
+  <li><a href="#first-person-i-we-us" id="toc-first-person-i-we-us" class="nav-link" data-scroll-target="#first-person-i-we-us">First Person (I, We, Us)</a></li>
+  <li><a href="#second-person-you-your" id="toc-second-person-you-your" class="nav-link" data-scroll-target="#second-person-you-your">Second Person (You, Your)</a></li>
+  <li><a href="#third-person-user-developer-system" id="toc-third-person-user-developer-system" class="nav-link" data-scroll-target="#third-person-user-developer-system">Third Person (User, Developer, System)</a></li>
+  <li><a href="#repository-guidelines" id="toc-repository-guidelines" class="nav-link" data-scroll-target="#repository-guidelines">Repository Guidelines</a></li>
+  </ul></li>
+  <li><a href="#tone-and-register" id="toc-tone-and-register" class="nav-link" data-scroll-target="#tone-and-register">Tone and Register</a>
+  <ul class="collapse">
+  <li><a href="#tone-spectrum-for-technical-documentation" id="toc-tone-spectrum-for-technical-documentation" class="nav-link" data-scroll-target="#tone-spectrum-for-technical-documentation">Tone Spectrum for Technical Documentation</a></li>
+  <li><a href="#adjusting-tone-by-content-type" id="toc-adjusting-tone-by-content-type" class="nav-link" data-scroll-target="#adjusting-tone-by-content-type">Adjusting Tone by Content Type</a></li>
+  <li><a href="#avoiding-problematic-tones" id="toc-avoiding-problematic-tones" class="nav-link" data-scroll-target="#avoiding-problematic-tones">Avoiding Problematic Tones</a></li>
+  <li><a href="#wikipedias-words-to-watch" id="toc-wikipedias-words-to-watch" class="nav-link" data-scroll-target="#wikipedias-words-to-watch">Wikipedia’s Words to Watch</a></li>
+  </ul></li>
+  <li><a href="#common-voice-pitfalls" id="toc-common-voice-pitfalls" class="nav-link" data-scroll-target="#common-voice-pitfalls">Common Voice Pitfalls</a>
+  <ul class="collapse">
+  <li><a href="#pitfall-1-mixing-person" id="toc-pitfall-1-mixing-person" class="nav-link" data-scroll-target="#pitfall-1-mixing-person">Pitfall 1: Mixing Person</a></li>
+  <li><a href="#pitfall-2-nominalizations-zombie-nouns" id="toc-pitfall-2-nominalizations-zombie-nouns" class="nav-link" data-scroll-target="#pitfall-2-nominalizations-zombie-nouns">Pitfall 2: Nominalizations (Zombie Nouns)</a></li>
+  <li><a href="#pitfall-3-hedging-language" id="toc-pitfall-3-hedging-language" class="nav-link" data-scroll-target="#pitfall-3-hedging-language">Pitfall 3: Hedging Language</a></li>
+  <li><a href="#pitfall-4-anthropomorphizing-technology" id="toc-pitfall-4-anthropomorphizing-technology" class="nav-link" data-scroll-target="#pitfall-4-anthropomorphizing-technology">Pitfall 4: Anthropomorphizing Technology</a></li>
+  <li><a href="#pitfall-5-buried-verbs" id="toc-pitfall-5-buried-verbs" class="nav-link" data-scroll-target="#pitfall-5-buried-verbs">Pitfall 5: Buried Verbs</a></li>
+  </ul></li>
+  <li><a href="#applying-style-principles-to-this-repository" id="toc-applying-style-principles-to-this-repository" class="nav-link" data-scroll-target="#applying-style-principles-to-this-repository">Applying Style Principles to This Repository</a>
+  <ul class="collapse">
+  <li><a href="#voice-standards-from-documentation-instructions" id="toc-voice-standards-from-documentation-instructions" class="nav-link" data-scroll-target="#voice-standards-from-documentation-instructions">Voice Standards from Documentation Instructions</a></li>
+  <li><a href="#validation-workflow" id="toc-validation-workflow" class="nav-link" data-scroll-target="#validation-workflow">Validation Workflow</a></li>
+  <li><a href="#style-evolution" id="toc-style-evolution" class="nav-link" data-scroll-target="#style-evolution">Style Evolution</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a>
+  <ul class="collapse">
+  <li><a href="#official-style-guides" id="toc-official-style-guides" class="nav-link" data-scroll-target="#official-style-guides">Official Style Guides</a></li>
+  <li><a href="#readability-and-cognitive-load" id="toc-readability-and-cognitive-load" class="nav-link" data-scroll-target="#readability-and-cognitive-load">Readability and Cognitive Load</a></li>
+  <li><a href="#writing-technique-resources" id="toc-writing-technique-resources" class="nav-link" data-scroll-target="#writing-technique-resources">Writing Technique Resources</a></li>
+  <li><a href="#repository-specific-documentation" id="toc-repository-specific-documentation" class="nav-link" data-scroll-target="#repository-specific-documentation">Repository-Specific Documentation</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/darioairoldi/Learn/edit/main/03.00-tech/40.00-technical-writing/01-writing-style-and-voice-principles.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/darioairoldi/Learn/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Technologies</li><li class="breadcrumb-item"><a href="../../03.00-tech/40.00-technical-writing/00-foundations-of-technical-documentation.html">Technical Writing</a></li><li class="breadcrumb-item"><a href="../../03.00-tech/40.00-technical-writing/01-writing-style-and-voice-principles.html">Writing Style &amp; Voice</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Writing Style and Voice Principles</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">technical-writing</div>
+    <div class="quarto-category">style</div>
+    <div class="quarto-category">voice</div>
+    <div class="quarto-category">readability</div>
+    <div class="quarto-category">grammar</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Comprehensive guide to writing style, voice, and tone in technical documentation, comparing Microsoft, Google, and Wikipedia approaches with practical before/after examples
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dario Airoldi </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 14, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="writing-style-and-voice-principles" class="level1">
+<h1>Writing Style and Voice Principles</h1>
+<blockquote class="blockquote">
+<p>Master active voice, sentence structure, readability formulas, and tone to create clear, accessible technical documentation that resonates with your audience</p>
+</blockquote>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#active-vs-passive-voice">Active vs.&nbsp;Passive Voice</a></li>
+<li><a href="#readability-formulas-explained">Readability Formulas Explained</a></li>
+<li><a href="#sentence-structure-and-length">Sentence Structure and Length</a></li>
+<li><a href="#voice-guidelines-microsoft-vs-google-vs-wikipedia">Voice Guidelines: Microsoft vs.&nbsp;Google vs.&nbsp;Wikipedia</a></li>
+<li><a href="#person-usage-first-second-third">Person Usage (First, Second, Third)</a></li>
+<li><a href="#tone-and-register">Tone and Register</a></li>
+<li><a href="#common-voice-pitfalls">Common Voice Pitfalls</a></li>
+<li><a href="#applying-style-principles-to-this-repository">Applying Style Principles to This Repository</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Voice and style form the personality of your documentation. While content accuracy ensures correctness, voice determines whether readers can <strong>understand</strong>, <strong>trust</strong>, and <strong>act on</strong> that information.</p>
+<p>This article explores:</p>
+<ul>
+<li><strong><mark>Active vs.&nbsp;passive voice</mark></strong> - When to use each and why Microsoft, Google, and Wikipedia differ</li>
+<li><strong><mark>Readability formulas</mark></strong> - Understanding Flesch-Kincaid scores and this repository’s 50-70 target</li>
+<li><strong><mark>Sentence structure</mark></strong> - Why 15-25 words per sentence improves comprehension</li>
+<li><strong><mark>Comparative analysis</mark></strong> - How major style guides approach voice differently</li>
+<li><strong><mark>Practical examples</mark></strong> - Before/after transformations showing principles in action</li>
+</ul>
+<p><strong>Prerequisites:</strong> Understanding of <a href="../../03.00-tech/40.00-technical-writing/00-foundations-of-technical-documentation.html">foundational documentation principles</a> is helpful but not required.</p>
+</section>
+<section id="active-vs.-passive-voice" class="level2">
+<h2 class="anchored" data-anchor-id="active-vs.-passive-voice">Active vs.&nbsp;Passive Voice</h2>
+<p>Voice refers to the relationship between the subject and verb in a sentence. This seemingly simple grammatical choice profoundly affects clarity, tone, and reader engagement.</p>
+<section id="definitions-and-examples" class="level3">
+<h3 class="anchored" data-anchor-id="definitions-and-examples">Definitions and Examples</h3>
+<p><strong>Active voice:</strong> Subject performs the action</p>
+<ul>
+<li>Structure: <code>[Subject] [Verb] [Object]</code></li>
+<li>Example: “The developer <strong>writes</strong> the code.”</li>
+<li>Emphasis: Who/what is doing something</li>
+</ul>
+<p><strong>Passive voice:</strong> Subject receives the action</p>
+<ul>
+<li>Structure: <code>[Object] [is/was] [Verb-ed] [by Subject]</code></li>
+<li>Example: “The code <strong>is written</strong> by the developer.”</li>
+<li>Emphasis: What is being done</li>
+</ul>
+</section>
+<section id="when-to-use-active-voice" class="level3">
+<h3 class="anchored" data-anchor-id="when-to-use-active-voice">When to Use Active Voice</h3>
+<p><strong>Clarity and directness</strong> - Active voice makes actors explicit</p>
+<p>❌ <strong>Passive (unclear):</strong> &gt; “The API should be initialized before any requests are made.”</p>
+<p>✅ <strong>Active (clear):</strong> &gt; “Initialize the API before you make any requests.”</p>
+<p><strong>Responsibility and agency</strong> - Active voice assigns accountability</p>
+<p>❌ <strong>Passive (vague):</strong> &gt; “An error was encountered during deployment.”</p>
+<p>✅ <strong>Active (specific):</strong> &gt; “The deployment script encountered an error.” &gt; Or better: “You encountered an error during deployment.”</p>
+<p><strong>Brevity</strong> - Active constructions are typically shorter</p>
+<p>❌ <strong>Passive (wordy - 11 words):</strong> &gt; “The configuration file must be updated by the administrator.”</p>
+<p>✅ <strong>Active (concise - 7 words):</strong> &gt; “The administrator must update the configuration file.” &gt; Or: “Update the configuration file.”</p>
+</section>
+<section id="when-passive-voice-is-acceptable" class="level3">
+<h3 class="anchored" data-anchor-id="when-passive-voice-is-acceptable">When Passive Voice Is Acceptable</h3>
+<p><strong>Actor is unknown or irrelevant</strong></p>
+<p>✅ <strong>Appropriate passive:</strong> &gt; “The server was compromised at 3:00 AM.” &gt; (Who compromised it is unknown)</p>
+<p><strong>Emphasis on the object, not the actor</strong></p>
+<p>✅ <strong>Appropriate passive:</strong> &gt; “Python was released in 1991.” &gt; (Focus on Python’s history, not Guido van Rossum’s action)</p>
+<p><strong>Scientific or encyclopedic tone</strong> (Wikipedia preference)</p>
+<p>✅ <strong>Appropriate passive:</strong> &gt; “The data was collected over six months.” &gt; (Scientific detachment, methodology focus)</p>
+<p><strong>Avoiding accusatory tone</strong></p>
+<p>✅ <strong>Appropriate passive:</strong> &gt; “The file was deleted accidentally.” &gt; (Less accusatory than “You deleted the file accidentally”)</p>
+</section>
+<section id="style-guide-comparison-voice-usage" class="level3">
+<h3 class="anchored" data-anchor-id="style-guide-comparison-voice-usage">Style Guide Comparison: Voice Usage</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 36%">
+<col style="width: 36%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Guide</th>
+<th>Active Voice Preference</th>
+<th>Passive Voice Guidance</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong><mark>Microsoft</mark></strong></td>
+<td>Strong preference</td>
+<td>Allow when appropriate</td>
+<td>“Active voice makes writing more direct and vigorous”</td>
+</tr>
+<tr class="even">
+<td><strong><mark>Google</mark></strong></td>
+<td>Very strong preference</td>
+<td>Use sparingly</td>
+<td>“Active voice is typically more direct and vigorous”</td>
+</tr>
+<tr class="odd">
+<td><strong><mark>Apple</mark></strong></td>
+<td>Strong preference</td>
+<td>Acceptable in specific contexts</td>
+<td>“Active voice creates more engaging content”</td>
+</tr>
+<tr class="even">
+<td><strong><mark>Wikipedia</mark></strong></td>
+<td>No strong preference</td>
+<td>Both widely used</td>
+<td>“Passive appropriate for encyclopedic tone, avoiding first/second person”</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="beforeafter-examples" class="level3">
+<h3 class="anchored" data-anchor-id="beforeafter-examples">Before/After Examples</h3>
+<p><strong>Example 1: Procedural instruction</strong></p>
+<p>❌ <strong>Passive and wordy:</strong> &gt; “After the installation has been completed by the user, the configuration wizard will be launched automatically and the initial settings should be reviewed carefully before the application is started.”</p>
+<p>✅ <strong>Active and clear:</strong> &gt; “After you install the software, the configuration wizard launches automatically. Review the initial settings before you start the application.”</p>
+<p><strong>Example 2: Error message</strong></p>
+<p>❌ <strong>Passive and vague:</strong> &gt; “An invalid parameter was provided.”</p>
+<p>✅ <strong>Active and specific:</strong> &gt; “You provided an invalid parameter. Check the API documentation for valid values.”</p>
+<p><strong>Example 3: Technical reference (passive acceptable)</strong></p>
+<p>✅ <strong>Passive (appropriate for reference material):</strong> &gt; “The function is called when the event fires. Three arguments are passed: event type, timestamp, and payload.”</p>
+<p><strong>Example 4: Tutorial (active preferred)</strong></p>
+<p>✅ <strong>Active (appropriate for learning):</strong> &gt; “Call the function when the event fires. Pass three arguments: event type, timestamp, and payload.”</p>
+</section>
+<section id="detecting-passive-voice" class="level3">
+<h3 class="anchored" data-anchor-id="detecting-passive-voice">Detecting Passive Voice</h3>
+<p><strong>Linguistic test:</strong> Can you insert “by zombies” after the verb?</p>
+<ul>
+<li>“The code was written [by zombies]” → Passive</li>
+<li>“The developer writes the code [by zombies]” → Doesn’t work, so active</li>
+</ul>
+<p><strong>Automated detection:</strong> This repository’s validation system flags excessive passive voice through grammar analysis.</p>
+</section>
+</section>
+<section id="readability-formulas-explained" class="level2">
+<h2 class="anchored" data-anchor-id="readability-formulas-explained">Readability Formulas Explained</h2>
+<p>Readability formulas quantify text complexity, helping ensure documentation matches audience capabilities.</p>
+<section id="flesch-reading-ease-score" class="level3">
+<h3 class="anchored" data-anchor-id="flesch-reading-ease-score">Flesch Reading Ease Score</h3>
+<p><strong>Formula:</strong> <code>206.835 - (1.015 × ASL) - (84.6 × ASW)</code></p>
+<ul>
+<li>ASL = Average Sentence Length (words per sentence)</li>
+<li>ASW = Average Syllables per Word</li>
+</ul>
+<p><strong>Score interpretation:</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 20%">
+<col style="width: 27%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Score Range</th>
+<th>Difficulty</th>
+<th>Typical Reader</th>
+<th>Example Context</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>90-100</td>
+<td>Very Easy</td>
+<td>11-year-old</td>
+<td>Children’s books</td>
+</tr>
+<tr class="even">
+<td>80-89</td>
+<td>Easy</td>
+<td>13-year-old</td>
+<td>Young adult fiction</td>
+</tr>
+<tr class="odd">
+<td>70-79</td>
+<td>Fairly Easy</td>
+<td>15-year-old</td>
+<td>Magazines</td>
+</tr>
+<tr class="even">
+<td><strong>60-69</strong></td>
+<td><strong>Standard</strong></td>
+<td><strong>17-18 year-old</strong></td>
+<td><strong>General documentation</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>50-59</strong></td>
+<td><strong>Fairly Difficult</strong></td>
+<td><strong>College level</strong></td>
+<td><strong>Technical documentation</strong></td>
+</tr>
+<tr class="even">
+<td>30-49</td>
+<td>Difficult</td>
+<td>College graduate</td>
+<td>Academic papers</td>
+</tr>
+<tr class="odd">
+<td>0-29</td>
+<td>Very Difficult</td>
+<td>Professional</td>
+<td>Legal, scientific journals</td>
+</tr>
+</tbody>
+</table>
+<p><strong>This repository’s target: 50-70</strong></p>
+<ul>
+<li><strong>Rationale:</strong> Balances technical precision with accessibility</li>
+<li><strong>Lower bound (50):</strong> Allows necessary technical complexity</li>
+<li><strong>Upper bound (70):</strong> Ensures general technical audience comprehension</li>
+</ul>
+<p><strong>Why we validate Flesch scores:</strong></p>
+<p>From <a href="../../.copilot/context/01.00-article-writing/02-validation-criteria.md">validation-criteria.md</a>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readability</span><span class="kw">:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">flesch_reading_ease</span><span class="kw">:</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">target_range</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="dv">50</span><span class="kw">,</span><span class="at"> </span><span class="dv">70</span><span class="kw">]</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">minimum_acceptable</span><span class="kw">:</span><span class="at"> </span><span class="dv">40</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">rationale</span><span class="kw">:</span><span class="at"> </span><span class="st">"Technical content requires precision, but must remain accessible"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="flesch-kincaid-grade-level" class="level3">
+<h3 class="anchored" data-anchor-id="flesch-kincaid-grade-level">Flesch-Kincaid Grade Level</h3>
+<p><strong>Formula:</strong> <code>(0.39 × ASL) + (11.8 × ASW) - 15.59</code></p>
+<p><strong>Score interpretation:</strong></p>
+<ul>
+<li>Score = US grade level required to understand the text</li>
+<li>Example: Score of 10 = 10th grade reading level</li>
+</ul>
+<p><strong>This repository’s target: 9-10</strong></p>
+<ul>
+<li>Equivalent to Flesch Reading Ease 50-70</li>
+<li>Indicates high school to early college reading level</li>
+</ul>
+</section>
+<section id="gunning-fog-index" class="level3">
+<h3 class="anchored" data-anchor-id="gunning-fog-index">Gunning Fog Index</h3>
+<p><strong>Formula:</strong> <code>0.4 × [(ASL) + 100 × (Complex Words / Total Words)]</code></p>
+<ul>
+<li>Complex Words = words with 3+ syllables</li>
+</ul>
+<p><strong>Interpretation:</strong> Years of formal education required</p>
+<p><strong>Typical ranges for technical documentation:</strong></p>
+<ul>
+<li>8-10: Accessible technical writing</li>
+<li>11-14: Standard technical documentation</li>
+<li>15+: Dense academic/specialist writing</li>
+</ul>
+</section>
+<section id="why-readability-matters-cognitive-load" class="level3">
+<h3 class="anchored" data-anchor-id="why-readability-matters-cognitive-load">Why Readability Matters: Cognitive Load</h3>
+<p><strong>Cognitive load theory</strong> explains that working memory has limited capacity (typically 7±2 “chunks” of information).</p>
+<p><strong>Factors increasing cognitive load:</strong></p>
+<ul>
+<li>Long sentences (&gt;30 words)</li>
+<li>Complex vocabulary (multi-syllable technical terms)</li>
+<li>Dense paragraph structure</li>
+<li>Passive voice constructions</li>
+<li>Abstract concepts without examples</li>
+</ul>
+<p><strong>Strategies reducing cognitive load:</strong></p>
+<ul>
+<li>Shorter sentences (15-25 words)</li>
+<li>Familiar words when possible</li>
+<li>Transitional phrases between ideas</li>
+<li>Active voice (fewer words, clearer actors)</li>
+<li>Concrete examples illustrating abstractions</li>
+</ul>
+</section>
+<section id="readability-formula-limitations" class="level3">
+<h3 class="anchored" data-anchor-id="readability-formula-limitations">Readability Formula Limitations</h3>
+<p><strong>Formulas cannot measure:</strong></p>
+<ul>
+<li>Technical accuracy</li>
+<li>Logical coherence</li>
+<li>Appropriate level of detail</li>
+<li>Cultural context</li>
+<li>Visual design impact</li>
+</ul>
+<p><strong>They are indicators, not mandates:</strong></p>
+<p>✅ <strong>Good use of readability scores:</strong> &gt; “This section has a Flesch score of 35 (difficult). Can we simplify the language or add examples?”</p>
+<p>❌ <strong>Bad use of readability scores:</strong> &gt; “This section must have a Flesch score of exactly 60. Replace all multi-syllable words.”</p>
+<p><strong>Repository principle:</strong> Readability scores inform validation, but technical accuracy always takes precedence. See <a href="../../.github/prompts/readability-review.prompt.md">validation workflow</a>.</p>
+</section>
+</section>
+<section id="sentence-structure-and-length" class="level2">
+<h2 class="anchored" data-anchor-id="sentence-structure-and-length">Sentence Structure and Length</h2>
+<p>Sentence length directly affects comprehension. Research shows optimal sentence length for technical documentation is <strong>15-25 words</strong>.</p>
+<section id="why-15-25-words" class="level3">
+<h3 class="anchored" data-anchor-id="why-15-25-words">Why 15-25 Words?</h3>
+<p><strong>Psychological research:</strong> Reading comprehension drops significantly beyond 25 words per sentence</p>
+<ul>
+<li>Reader must hold more information in working memory</li>
+<li>Clause relationships become harder to track</li>
+<li>Readers may need to re-read for understanding</li>
+</ul>
+<p><strong>Practical testing:</strong> Major tech companies’ analysis shows 15-25 words optimizes:</p>
+<ul>
+<li>Reading speed</li>
+<li>Comprehension accuracy</li>
+<li>User satisfaction with documentation</li>
+</ul>
+</section>
+<section id="sentence-type-distribution" class="level3">
+<h3 class="anchored" data-anchor-id="sentence-type-distribution">Sentence Type Distribution</h3>
+<p>Effective technical writing mixes sentence types:</p>
+<p><strong>Simple sentences</strong> (1 independent clause)</p>
+<ul>
+<li>Best for critical information</li>
+<li>Example: “Save your work before closing the application.”</li>
+<li>Use: 40-50% of sentences</li>
+</ul>
+<p><strong>Compound sentences</strong> (2+ independent clauses, coordinating conjunction)</p>
+<ul>
+<li>Connect related ideas of equal importance</li>
+<li>Example: “The function returns an object, and the object contains three properties.”</li>
+<li>Use: 20-30% of sentences</li>
+</ul>
+<p><strong>Complex sentences</strong> (1 independent + 1+ dependent clause)</p>
+<ul>
+<li>Show relationships between ideas</li>
+<li>Example: “When the user clicks the button, the form validates all input fields.”</li>
+<li>Use: 20-30% of sentences</li>
+</ul>
+<p><strong>Compound-complex sentences</strong> (2+ independent + 1+ dependent)</p>
+<ul>
+<li>Use sparingly, risk comprehension</li>
+<li>Example: “When you initialize the API, it loads the configuration, and then it establishes a connection.”</li>
+<li>Use: 0-10% of sentences</li>
+</ul>
+</section>
+<section id="beforeafter-sentence-length-optimization" class="level3">
+<h3 class="anchored" data-anchor-id="beforeafter-sentence-length-optimization">Before/After: Sentence Length Optimization</h3>
+<p><strong>Example 1: Breaking up a 45-word monster</strong></p>
+<p>❌ <strong>Too long (45 words, Flesch ~35):</strong> &gt; “The authentication system provides OAuth 2.0 support which allows users to authenticate using their existing social media accounts including Facebook, Google, and Twitter, and the implementation follows the authorization code flow pattern to ensure security.”</p>
+<p>✅ <strong>Optimized (3 sentences, 15-16 words each, Flesch ~60):</strong> &gt; “The authentication system supports OAuth 2.0. Users can authenticate using Facebook, Google, or Twitter accounts. The implementation follows the authorization code flow for security.”</p>
+<p><strong>Example 2: Combining choppy short sentences</strong></p>
+<p>❌ <strong>Too choppy (4-6 words each, Flesch ~80 but immature tone):</strong> &gt; “Open the file. Click Save. The file saves. A confirmation appears.”</p>
+<p>✅ <strong>Optimized (combined, 18 words total, Flesch ~65):</strong> &gt; “Open the file and click Save. The file saves, and a confirmation message appears.”</p>
+<p><strong>Example 3: Balancing technical complexity</strong></p>
+<p>❌ <strong>Dense single sentence (52 words, Flesch ~25):</strong> &gt; “To configure the load balancer to distribute incoming HTTP requests across multiple backend servers while maintaining session affinity through cookie-based tracking and implementing health checks that automatically remove unresponsive servers from the rotation, follow these steps.”</p>
+<p>✅ <strong>Optimized (3 sentences, ~17 words each, Flesch ~55):</strong> &gt; “This section explains how to configure the load balancer for HTTP requests. The configuration includes session affinity via cookies and automatic health checks. Health checks remove unresponsive servers from rotation.”</p>
+</section>
+</section>
+<section id="voice-guidelines-microsoft-vs.-google-vs.-wikipedia" class="level2">
+<h2 class="anchored" data-anchor-id="voice-guidelines-microsoft-vs.-google-vs.-wikipedia">Voice Guidelines: Microsoft vs.&nbsp;Google vs.&nbsp;Wikipedia</h2>
+<p>Different organizations prioritize different aspects of voice. Understanding these priorities helps you make informed decisions.</p>
+<section id="microsoft-writing-style-guide-approach" class="level3">
+<h3 class="anchored" data-anchor-id="microsoft-writing-style-guide-approach">Microsoft Writing Style Guide Approach</h3>
+<p><strong>Core philosophy:</strong> “Write like you speak”</p>
+<p><strong>Voice characteristics:</strong></p>
+<ul>
+<li><strong>Person:</strong> Second person (you) throughout</li>
+<li><strong>Tone:</strong> Conversational but professional</li>
+<li><strong>Contractions:</strong> Acceptable (“don’t” not “do not”)</li>
+<li><strong>Sentence length:</strong> “Short sentences are powerful”</li>
+</ul>
+<p><strong>Examples from Microsoft documentation:</strong></p>
+<p>✅ <strong>Conversational Microsoft style:</strong> &gt; “You can use Azure Functions to run code without managing servers. When an event triggers your function, it runs in a fully managed environment.”</p>
+<p><strong>Microsoft’s rationale:</strong></p>
+<ul>
+<li>Users feel directly addressed</li>
+<li>Reduces formality barrier</li>
+<li>Increases engagement with content</li>
+<li>Mirrors how developers actually speak</li>
+</ul>
+</section>
+<section id="google-developer-documentation-approach" class="level3">
+<h3 class="anchored" data-anchor-id="google-developer-documentation-approach">Google Developer Documentation Approach</h3>
+<p><strong>Core philosophy:</strong> “Write for a global audience”</p>
+<p><strong>Voice characteristics:</strong></p>
+<ul>
+<li><strong>Person:</strong> Second person (you)</li>
+<li><strong>Tone:</strong> Friendly but precise</li>
+<li><strong>Contractions:</strong> Avoided for international clarity</li>
+<li><strong>Sentence length:</strong> Very short, scannable</li>
+</ul>
+<p><strong>Examples from Google documentation:</strong></p>
+<p>✅ <strong>Clear Google style:</strong> &gt; “Use Cloud Functions to deploy code without managing servers. Cloud Functions runs your code when an event triggers it.”</p>
+<p><strong>Google’s distinctive elements:</strong></p>
+<ul>
+<li>No contractions (international readers)</li>
+<li>Ultra-short sentences (mobile-first)</li>
+<li>Product names as subjects (not “it”)</li>
+<li>Explicit over implicit</li>
+</ul>
+<p><strong>Google vs.&nbsp;Microsoft comparison:</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 39%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aspect</th>
+<th>Microsoft</th>
+<th>Google</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>“You can’t configure…”</td>
+<td>✅ Acceptable</td>
+<td>❌ Use “You cannot…”</td>
+</tr>
+<tr class="even">
+<td>“It automatically scales”</td>
+<td>✅ Acceptable</td>
+<td>❌ Use “[Service name] automatically scales”</td>
+</tr>
+<tr class="odd">
+<td>Sentence avg.</td>
+<td>18-22 words</td>
+<td>12-18 words</td>
+</tr>
+<tr class="even">
+<td>Paragraph length</td>
+<td>4-6 sentences</td>
+<td>2-4 sentences</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="wikipedia-manual-of-style-approach" class="level3">
+<h3 class="anchored" data-anchor-id="wikipedia-manual-of-style-approach">Wikipedia Manual of Style Approach</h3>
+<p><strong>Core philosophy:</strong> “Encyclopedic neutrality”</p>
+<p><strong>Voice characteristics:</strong></p>
+<ul>
+<li><strong>Person:</strong> Third person only</li>
+<li><strong>Tone:</strong> Neutral, academic</li>
+<li><strong>Contractions:</strong> Never</li>
+<li><strong>Sentence length:</strong> Varies, completeness valued over brevity</li>
+</ul>
+<p><strong>Wikipedia rules:</strong></p>
+<ul>
+<li>❌ “You should back up your data”</li>
+<li>✅ “Users should back up their data” or “Data should be backed up”</li>
+<li>❌ “We recommend…”</li>
+<li>✅ “Experts recommend…” or “According to [source]…”</li>
+</ul>
+<p><strong>When Wikipedia’s approach is appropriate:</strong></p>
+<p>✅ <strong>For encyclopedic content:</strong> &gt; “The Model-View-Controller (MVC) pattern separates concerns into three interconnected components. The model manages data, the view displays the interface, and the controller handles user input.”</p>
+<p>✅ <strong>For historical/technical background:</strong> &gt; “REST was introduced by Roy Fielding in his 2000 doctoral dissertation. The architectural style emphasizes stateless communication and resource-based interactions.”</p>
+<p>❌ <strong>Not appropriate for procedural content:</strong> &gt; “The user should open the terminal and type the command. The system will display output.” &gt; <em>(Awkward for instructions)</em></p>
+</section>
+<section id="comparison-table-voice-across-style-guides" class="level3">
+<h3 class="anchored" data-anchor-id="comparison-table-voice-across-style-guides">Comparison Table: Voice Across Style Guides</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 21%">
+<col style="width: 16%">
+<col style="width: 21%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Element</th>
+<th>Microsoft 📘</th>
+<th>Google 📘</th>
+<th>Wikipedia 📘</th>
+<th>This Repository</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Primary person</strong></td>
+<td>Second (you)</td>
+<td>Second (you)</td>
+<td>Third person</td>
+<td>Second (procedural), Third (concepts)</td>
+</tr>
+<tr class="even">
+<td><strong>Contractions</strong></td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>Minimal</td>
+</tr>
+<tr class="odd">
+<td><strong>Sentence avg. length</strong></td>
+<td>18-22 words</td>
+<td>12-18 words</td>
+<td>Varies (20-30)</td>
+<td>15-25 words</td>
+</tr>
+<tr class="even">
+<td><strong>Active voice %</strong></td>
+<td>80-90%</td>
+<td>85-95%</td>
+<td>60-70%</td>
+<td>75-85%</td>
+</tr>
+<tr class="odd">
+<td><strong>Tone</strong></td>
+<td>Conversational</td>
+<td>Friendly-precise</td>
+<td>Neutral-academic</td>
+<td>Professional-accessible</td>
+</tr>
+<tr class="even">
+<td><strong>Technical terms</strong></td>
+<td>Define on first use</td>
+<td>Link to glossary</td>
+<td>Link to related articles</td>
+<td>Define + link</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="person-usage-first-second-third" class="level2">
+<h2 class="anchored" data-anchor-id="person-usage-first-second-third">Person Usage (First, Second, Third)</h2>
+<p>Person choice fundamentally affects tone and reader relationship with content.</p>
+<section id="first-person-i-we-us" class="level3">
+<h3 class="anchored" data-anchor-id="first-person-i-we-us">First Person (I, We, Us)</h3>
+<p><strong>Appropriate contexts:</strong></p>
+<p>✅ <strong>Tutorials (plural “we” as guide):</strong> &gt; “In this tutorial, we’ll build a REST API from scratch. We’ll start with basic routing, then add authentication.”</p>
+<p>✅ <strong>Author’s note in explanation:</strong> &gt; “I recommend starting with the simpler approach before attempting the optimized version.”</p>
+<p>✅ <strong>Open-source project documentation (community “we”):</strong> &gt; “We welcome contributions from developers worldwide. We review pull requests within 48 hours.”</p>
+<p><strong>Inappropriate contexts:</strong></p>
+<p>❌ <strong>Reference documentation:</strong> &gt; “We provide three authentication methods…” <em>(system provides, not “we”)</em></p>
+<p>❌ <strong>How-to guides:</strong> &gt; “We need to configure the settings…” <em>(reader configures, not collective “we”)</em></p>
+</section>
+<section id="second-person-you-your" class="level3">
+<h3 class="anchored" data-anchor-id="second-person-you-your">Second Person (You, Your)</h3>
+<p><strong>Appropriate contexts:</strong></p>
+<p>✅ <strong>Procedural instructions:</strong> &gt; “You must install Node.js before you run the application.”</p>
+<p>✅ <strong>Conditional guidance:</strong> &gt; “If you need real-time updates, use WebSockets instead of HTTP polling.”</p>
+<p>✅ <strong>Troubleshooting:</strong> &gt; “If you see error 404, check your URL configuration.”</p>
+<p><strong>Inappropriate contexts:</strong></p>
+<p>❌ <strong>Encyclopedic content:</strong> &gt; “You can find REST in many modern APIs…” <em>(encyclopedias don’t address readers)</em></p>
+<p>❌ <strong>Reference definitions:</strong> &gt; “The function accepts three parameters you pass…” <em>(reference describes, doesn’t instruct)</em></p>
+</section>
+<section id="third-person-user-developer-system" class="level3">
+<h3 class="anchored" data-anchor-id="third-person-user-developer-system">Third Person (User, Developer, System)</h3>
+<p><strong>Appropriate contexts:</strong></p>
+<p>✅ <strong>API reference:</strong> &gt; “The function returns null when the user provides an invalid parameter.”</p>
+<p>✅ <strong>Conceptual explanation:</strong> &gt; “Developers choose NoSQL databases when the data model requires flexibility.”</p>
+<p>✅ <strong>System behavior:</strong> &gt; “The application validates input before processing the request.”</p>
+<p><strong>Inappropriate contexts:</strong></p>
+<p>❌ <strong>Step-by-step instructions:</strong> &gt; “The user should click the button and enter their password.” <em>(second person clearer)</em></p>
+</section>
+<section id="repository-guidelines" class="level3">
+<h3 class="anchored" data-anchor-id="repository-guidelines">Repository Guidelines</h3>
+<p>Based on <a href="../../.github/instructions/documentation.instructions.md">documentation.instructions.md</a>:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 41%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Content Type</th>
+<th>Preferred Person</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Tutorials</strong></td>
+<td>Second (you) + occasional plural first (we)</td>
+<td>Direct instruction + guidance</td>
+</tr>
+<tr class="even">
+<td><strong>How-to guides</strong></td>
+<td>Second (you)</td>
+<td>Action-oriented clarity</td>
+</tr>
+<tr class="odd">
+<td><strong>Reference</strong></td>
+<td>Third person</td>
+<td>Objective description</td>
+</tr>
+<tr class="even">
+<td><strong>Explanation</strong></td>
+<td>Third person + educational first plural (we)</td>
+<td>Neutral analysis + shared exploration</td>
+</tr>
+<tr class="odd">
+<td><strong>Validation prompts</strong></td>
+<td>Second (addressing the model)</td>
+<td>Clear agent instructions</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="tone-and-register" class="level2">
+<h2 class="anchored" data-anchor-id="tone-and-register">Tone and Register</h2>
+<p>Tone conveys attitude; register indicates formality level. Both should match audience expectations and content purpose.</p>
+<section id="tone-spectrum-for-technical-documentation" class="level3">
+<h3 class="anchored" data-anchor-id="tone-spectrum-for-technical-documentation">Tone Spectrum for Technical Documentation</h3>
+<p><strong>Formal ← → Conversational</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 25%">
+<col style="width: 58%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tone</th>
+<th>Example</th>
+<th>Appropriate Context</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Formal</strong></td>
+<td>“One must ensure data persistence prior to system termination.”</td>
+<td>Academic papers, standards documents</td>
+</tr>
+<tr class="even">
+<td><strong>Professional</strong></td>
+<td>“Save your work before closing the application.”</td>
+<td>Enterprise documentation, official guides</td>
+</tr>
+<tr class="odd">
+<td><strong>Conversational</strong></td>
+<td>“Don’t forget to save before you close!”</td>
+<td>Tutorials, blog-style content</td>
+</tr>
+<tr class="even">
+<td><strong>Casual</strong></td>
+<td>“Make sure you hit that save button!”</td>
+<td>Community forums, chat documentation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Repository standard:</strong> Professional with occasional conversational warmth in tutorials</p>
+</section>
+<section id="adjusting-tone-by-content-type" class="level3">
+<h3 class="anchored" data-anchor-id="adjusting-tone-by-content-type">Adjusting Tone by Content Type</h3>
+<p><strong>Reference material:</strong> Austere, factual &gt; “<strong>Parameters</strong><br>
+&gt; - <code>userId</code> (string, required): Unique identifier<br>
+&gt; - <code>options</code> (object, optional): Configuration object<br>
+&gt; <strong>Returns:</strong> User object or null”</p>
+<p><strong>How-to guide:</strong> Professional, direct &gt; “To authenticate users, configure the authentication provider in <code>appsettings.json</code>. Add your client ID and secret to the configuration object.”</p>
+<p><strong>Tutorial:</strong> Warmer, encouraging &gt; “Great! You’ve configured your first authentication provider. In the next section, we’ll test it with a sample user login.”</p>
+<p><strong>Explanation:</strong> Neutral, analytical &gt; “OAuth 2.0 separates authentication from authorization, allowing third-party applications to access user resources without exposing credentials.”</p>
+</section>
+<section id="avoiding-problematic-tones" class="level3">
+<h3 class="anchored" data-anchor-id="avoiding-problematic-tones">Avoiding Problematic Tones</h3>
+<p><strong>Condescending:</strong> ❌ “Obviously, you should always validate input.” ❌ “It’s simple: just follow these twelve steps.” ❌ “Even a beginner knows to check for errors.”</p>
+<p><strong>Presumptuous:</strong> ❌ “You probably want to use React for this.” ❌ “Most developers prefer…” ❌ “Clearly, this is the best approach.”</p>
+<p><strong>Apologetic:</strong> ❌ “Sorry for the confusion, but…” ❌ “Unfortunately, you’ll have to…” ❌ “We apologize for the complicated setup.”</p>
+<p><strong>Overly casual:</strong> ❌ “This API is super awesome!” ❌ “Just throw your code in here and you’re good to go.” ❌ “LOL, debugging is the worst, right?”</p>
+</section>
+<section id="wikipedias-words-to-watch" class="level3">
+<h3 class="anchored" data-anchor-id="wikipedias-words-to-watch">Wikipedia’s Words to Watch</h3>
+<p>Wikipedia identifies problematic <a href="https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style/Words_to_watch">words that undermine neutrality</a>:</p>
+<p><strong>Peacock terms</strong> (unjustified praise):</p>
+<ul>
+<li>❌ “elegant solution,” “groundbreaking,” “world-class”</li>
+<li>✅ Provide evidence: “The algorithm reduces time complexity from O(n²) to O(n log n)”</li>
+</ul>
+<p><strong>Weasel words</strong> (vague attribution):</p>
+<ul>
+<li>❌ “Some experts think,” “it is widely believed,” “many developers say”</li>
+<li>✅ Specific attribution: “According to the 2024 Stack Overflow survey, 38% of developers…”</li>
+</ul>
+<p><strong>Editorial comments</strong>:</p>
+<ul>
+<li>❌ “Note that,” “obviously,” “clearly,” “of course”</li>
+<li>✅ State facts directly without meta-commentary</li>
+</ul>
+<p><strong>Repository application:</strong> Our validation system flags these patterns through logic and fact-checking dimensions.</p>
+</section>
+</section>
+<section id="common-voice-pitfalls" class="level2">
+<h2 class="anchored" data-anchor-id="common-voice-pitfalls">Common Voice Pitfalls</h2>
+<section id="pitfall-1-mixing-person" class="level3">
+<h3 class="anchored" data-anchor-id="pitfall-1-mixing-person">Pitfall 1: Mixing Person</h3>
+<p>❌ <strong>Inconsistent:</strong> &gt; “You should configure the API key. Users can then authenticate. One must ensure the secret remains private.”</p>
+<p>✅ <strong>Consistent:</strong> &gt; “Configure your API key. You can then authenticate. Ensure your secret remains private.”</p>
+</section>
+<section id="pitfall-2-nominalizations-zombie-nouns" class="level3">
+<h3 class="anchored" data-anchor-id="pitfall-2-nominalizations-zombie-nouns">Pitfall 2: Nominalizations (Zombie Nouns)</h3>
+<p><strong>Nominalization:</strong> Converting verbs to nouns, creating wordiness</p>
+<p>❌ <strong>Nominalized (passive, wordy):</strong> &gt; “The implementation of the optimization was done to achieve a reduction in latency.”</p>
+<p>✅ <strong>Active verbs:</strong> &gt; “We implemented the optimization to reduce latency.”</p>
+<p><strong>Common nominalizations to avoid:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Nominalization</th>
+<th>Better Verb</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>“Make a decision”</td>
+<td>“Decide”</td>
+</tr>
+<tr class="even">
+<td>“Perform an analysis”</td>
+<td>“Analyze”</td>
+</tr>
+<tr class="odd">
+<td>“Conduct an investigation”</td>
+<td>“Investigate”</td>
+</tr>
+<tr class="even">
+<td>“Achieve implementation”</td>
+<td>“Implement”</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="pitfall-3-hedging-language" class="level3">
+<h3 class="anchored" data-anchor-id="pitfall-3-hedging-language">Pitfall 3: Hedging Language</h3>
+<p>Excessive hedging undermines authority:</p>
+<p>❌ <strong>Over-hedged:</strong> &gt; “You might possibly want to perhaps consider potentially using the cache, which could maybe improve performance somewhat.”</p>
+<p>✅ <strong>Confident (still accurate):</strong> &gt; “Using the cache improves performance in most scenarios.”</p>
+<p><strong>Appropriate hedging</strong> (when uncertainty is real): ✅ “Performance may vary depending on network conditions.”</p>
+</section>
+<section id="pitfall-4-anthropomorphizing-technology" class="level3">
+<h3 class="anchored" data-anchor-id="pitfall-4-anthropomorphizing-technology">Pitfall 4: Anthropomorphizing Technology</h3>
+<p>❌ <strong>Anthropomorphized:</strong> &gt; “The API wants you to provide credentials.” &gt; “The function is happy to accept three parameters.” &gt; “The system thinks your input is invalid.”</p>
+<p>✅ <strong>Factual:</strong> &gt; “The API requires credentials.” &gt; “The function accepts three parameters.” &gt; “The system rejects invalid input.”</p>
+</section>
+<section id="pitfall-5-buried-verbs" class="level3">
+<h3 class="anchored" data-anchor-id="pitfall-5-buried-verbs">Pitfall 5: Buried Verbs</h3>
+<p><strong>Buried verb:</strong> Hidden in a noun phrase</p>
+<p>❌ <strong>Buried:</strong> &gt; “We are in agreement that validation is a requirement.”</p>
+<p>✅ <strong>Direct:</strong> &gt; “We agree that validation is required.”</p>
+<p>More examples:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Buried Verb</th>
+<th>Direct</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>“Came to a realization”</td>
+<td>“Realized”</td>
+</tr>
+<tr class="even">
+<td>“Made an assumption”</td>
+<td>“Assumed”</td>
+</tr>
+<tr class="odd">
+<td>“Reached a conclusion”</td>
+<td>“Concluded”</td>
+</tr>
+<tr class="even">
+<td>“Give consideration to”</td>
+<td>“Consider”</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="applying-style-principles-to-this-repository" class="level2">
+<h2 class="anchored" data-anchor-id="applying-style-principles-to-this-repository">Applying Style Principles to This Repository</h2>
+<section id="voice-standards-from-documentation-instructions" class="level3">
+<h3 class="anchored" data-anchor-id="voice-standards-from-documentation-instructions">Voice Standards from Documentation Instructions</h3>
+<p>From <a href="../../.github/instructions/documentation.instructions.md">documentation.instructions.md</a>:</p>
+<p><strong>Active voice preference:</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="an">Target:</span><span class="co"> 75-85% active voice</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">Rationale:</span><span class="co"> Clarity and directness while allowing </span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">           passive voice when appropriate</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Sentence length target:</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="an">Range:</span><span class="co"> 15-25 words per sentence</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="an">Maximum:</span><span class="co"> 30 words (exceptions for complex technical descriptions)</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="an">Rationale:</span><span class="co"> Optimizes comprehension without oversimplification</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Readability scores:</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="an">Flesch Reading Ease:</span><span class="co"> 50-70 (fairly difficult to standard)</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="an">Flesch-Kincaid Grade:</span><span class="co"> 9-10 (high school level)</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="an">Rationale:</span><span class="co"> Technical precision + accessibility</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="validation-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="validation-workflow">Validation Workflow</h3>
+<p>Our validation system enforces style principles through automated and human review:</p>
+<p><strong>Grammar validation</strong> (<a href="../../.github/prompts/grammar-review.prompt.md">grammar-review.prompt.md</a>):</p>
+<ul>
+<li>Active vs.&nbsp;passive voice ratio</li>
+<li>Person consistency within sections</li>
+<li>Sentence length distribution</li>
+</ul>
+<p><strong>Readability validation</strong> (<a href="../../.github/prompts/readability-review.prompt.md">readability-review.prompt.md</a>):</p>
+<ul>
+<li>Flesch Reading Ease score</li>
+<li>Flesch-Kincaid Grade Level</li>
+<li>Average sentence length</li>
+<li>Complex word percentage</li>
+</ul>
+<p><strong>Logic validation</strong> (<a href="../../.github/prompts/logic-analysis.prompt.md">logic-analysis.prompt.md</a>):</p>
+<ul>
+<li>Hedging language patterns</li>
+<li>Nominalizations</li>
+<li>Anthropomorphized technology</li>
+</ul>
+<p>See <a href="../../03.00-tech/40.00-technical-writing/05-validation-and-quality-assurance.html">05-validation-and-quality-assurance.md</a> for complete validation system documentation.</p>
+</section>
+<section id="style-evolution" class="level3">
+<h3 class="anchored" data-anchor-id="style-evolution">Style Evolution</h3>
+<p>Documentation style evolves based on:</p>
+<ul>
+<li>User feedback on comprehension</li>
+<li>Readability metrics from validation</li>
+<li>Comparative analysis with authoritative sources</li>
+<li>Community standards in technical writing</li>
+</ul>
+<p><strong>Living document principle:</strong> Style guidelines adapt as best practices emerge, while maintaining consistency within existing content.</p>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Voice and style fundamentally shape documentation effectiveness. Key takeaways:</p>
+<p><strong>Active voice matters</strong> - Use it 75-85% of the time for clarity, but embrace passive voice when appropriate (scientific tone, unknown actor, emphasis on object)</p>
+<p><strong>Readability is measurable</strong> - Flesch scores 50-70 and sentence lengths 15-25 words optimize technical comprehension without oversimplification</p>
+<p><strong>Style guides differ intentionally</strong> - Microsoft favors conversational warmth, Google emphasizes global clarity, Wikipedia requires neutral encyclopedic tone - choose based on audience and content type</p>
+<p><strong>Person consistency matters</strong> - Second person (you) for instructions, third person for reference, first person plural (we) sparingly for tutorials</p>
+<p><strong>Tone should match purpose</strong> - Professional for how-to guides, austere for reference, warmer for tutorials, neutral for explanation</p>
+<p><strong>Common pitfalls are avoidable</strong> - Watch for person mixing, nominalizations, excessive hedging, anthropomorphizing, and buried verbs</p>
+<p><strong>This repository synthesizes principles</strong> - Validation system enforces voice standards while allowing appropriate flexibility</p>
+<p><strong>Next in series:</strong></p>
+<ul>
+<li><a href="../../03.00-tech/40.00-technical-writing/02-structure-and-information-architecture.html">02-structure-and-information-architecture.md</a> - Progressive disclosure, LATCH framework, TOC strategies</li>
+<li><a href="../../03.00-tech/40.00-technical-writing/05-validation-and-quality-assurance.html">05-validation-and-quality-assurance.md</a> - How validation operationalizes these principles</li>
+<li><a href="../../03.00-tech/40.00-technical-writing/00-foundations-of-technical-documentation.html">00-foundations-of-technical-documentation.md</a> - Framework context for voice decisions</li>
+</ul>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<section id="official-style-guides" class="level3">
+<h3 class="anchored" data-anchor-id="official-style-guides">Official Style Guides</h3>
+<p><strong><a href="https://learn.microsoft.com/style-guide/top-10-tips-style-voice">Microsoft Writing Style Guide - Top 10 Tips</a></strong> 📘 [Official]<br>
+Core voice and style principles including “write like you speak” and active voice preference.</p>
+<p><strong><a href="https://developers.google.com/style/tone">Google Developer Documentation Style Guide - Voice and Tone</a></strong> 📘 [Official]<br>
+Guidance on conversational but professional tone for global developer audiences.</p>
+<blockquote class="blockquote">
+<p><strong>📚 Deep Dive:</strong> For comprehensive Microsoft voice principles (warm/relaxed, crisp/clear, ready to help), contractions usage, and bias-free language, see the dedicated <a href="Microsoft Writing Style Guide/01-microsoft-voice-and-tone.md">Microsoft Voice and Tone Analysis</a>.</p>
+</blockquote>
+<p><strong><a href="https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style#Grammar_and_usage">Wikipedia Manual of Style - Grammar and Usage</a></strong> 📘 [Official]<br>
+Encyclopedic voice standards including third person preference and passive voice usage.</p>
+<p><strong><a href="https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style/Words_to_watch">Wikipedia Manual of Style - Words to Watch</a></strong> 📘 [Official]<br>
+Comprehensive guide to problematic words including peacock terms, weasel words, and editorial language.</p>
+</section>
+<section id="readability-and-cognitive-load" class="level3">
+<h3 class="anchored" data-anchor-id="readability-and-cognitive-load">Readability and Cognitive Load</h3>
+<p><strong><a href="https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests">Flesch Reading Ease - Wikipedia</a></strong> 📘 [Official]<br>
+Technical explanation of Flesch-Kincaid readability formulas and scoring interpretation.</p>
+<p><strong><a href="https://www.plainlanguage.gov/guidelines/">Plain Language Guidelines - Federal Plain Language</a></strong> 📘 [Official]<br>
+US government standards for clear, accessible writing including readability targets.</p>
+<p><strong><a href="https://en.wikipedia.org/wiki/Cognitive_load">Cognitive Load Theory - Wikipedia</a></strong> 📗 [Verified Community]<br>
+Psychological foundation for understanding why sentence length and structure affect comprehension.</p>
+</section>
+<section id="writing-technique-resources" class="level3">
+<h3 class="anchored" data-anchor-id="writing-technique-resources">Writing Technique Resources</h3>
+<p><strong><a href="https://www.gutenberg.org/files/37134/37134-h/37134-h.htm">The Elements of Style - Strunk &amp; White</a></strong> 📗 [Verified Community]<br>
+Classic writing guide emphasizing active voice, brevity, and clarity.</p>
+<p><strong><a href="https://www.chicagomanualofstyle.org/book/ed17/part2/ch05/toc.html">Chicago Manual of Style - Grammar</a></strong> 📘 [Official]<br>
+Authoritative grammar reference including detailed voice and mood guidance.</p>
+</section>
+<section id="repository-specific-documentation" class="level3">
+<h3 class="anchored" data-anchor-id="repository-specific-documentation">Repository-Specific Documentation</h3>
+<p><strong><a href="../../.github/instructions/documentation.instructions.md#voice-and-tone">Documentation Instructions - Voice and Tone</a></strong> [Internal Reference]<br>
+This repository’s comprehensive voice guidelines with specific targets and rationale.</p>
+<p><strong><a href="../../.copilot/context/01.00-article-writing/02-validation-criteria.md#readability">Validation Criteria - Readability</a></strong> [Internal Reference]<br>
+Flesch score targets (50-70), grade level (9-10), and sentence length standards (15-25 words).</p>
+<p><strong><a href="../../.github/prompts/grammar-review.prompt.md">Grammar Review Prompt</a></strong> [Internal Reference]<br>
+Validation prompt for checking active/passive voice, person consistency, and sentence structure.</p>
+<p><strong><a href="../../.github/prompts/readability-review.prompt.md">Readability Review Prompt</a></strong> [Internal Reference]<br>
+Validation prompt for analyzing Flesch scores, grade level, and readability optimization.</p>
+<hr>
+<!-- Validation Metadata
+validation_status: pending_first_validation
+article_metadata:
+  filename: "01-writing-style-and-voice-principles.md"
+  series: "Technical Documentation Excellence"
+  series_position: 2
+  total_articles: 8
+  prerequisites:
+    - "00-foundations-of-technical-documentation.md"
+  related_articles:
+    - "00-foundations-of-technical-documentation.md"
+    - "05-validation-and-quality-assurance.md"
+    - "03-accessibility-in-technical-writing.md"
+  version: "1.0"
+  last_updated: "2026-01-14"
+-->
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/darioairoldi\.github\.io\/Learn");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../03.00-tech/40.00-technical-writing/00-foundations-of-technical-documentation.html" class="pagination-link" aria-label="Foundations &amp; Principles">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Foundations &amp; Principles</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../03.00-tech/40.00-technical-writing/02-structure-and-information-architecture.html" class="pagination-link" aria-label="Structure &amp; Architecture">
+        <span class="nav-page-text">Structure &amp; Architecture</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/darioairoldi/Learn/edit/main/03.00-tech/40.00-technical-writing/01-writing-style-and-voice-principles.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/darioairoldi/Learn/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
