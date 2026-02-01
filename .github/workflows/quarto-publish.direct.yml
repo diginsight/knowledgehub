@@ -121,6 +121,10 @@ jobs:
       - name: Render Quarto Project
         shell: pwsh
         run: |
+          Write-Host "Cleaning previous build artifacts..."
+          Remove-Item -Recurse -Force .quarto -ErrorAction SilentlyContinue
+          Remove-Item -Recurse -Force docs -ErrorAction SilentlyContinue
+          
           Write-Host "Rendering Quarto project..."
           quarto render --to html
 
