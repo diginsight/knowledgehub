@@ -221,8 +221,18 @@ jobs:
           git add -A
           git commit -m "🚀 Deploy site - $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')" -m "From commit: $env:GITHUB_SHA"
 
-          # Force push (completely replaces gh-pages)
-          git push origin gh-pages-deploy:gh-pages --force
+          # Debug: Show commit info
+          Write-Host "=== New commit info ==="
+          git log -1 --oneline
+          Write-Host "==="
+          
+          # Delete remote gh-pages first to ensure fresh push
+          Write-Host "Deleting remote gh-pages branch..."
+          git push origin --delete gh-pages 2>$null
+          
+          # Push new content
+          Write-Host "Pushing new content to gh-pages..."
+          git push origin gh-pages-deploy:gh-pages --verbose 2>&1
 
           Write-Host "✓ Site deployed to gh-pages branch!"
 
