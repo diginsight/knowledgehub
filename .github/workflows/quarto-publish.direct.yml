@@ -23,7 +23,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          ref: main  # Explicitly checkout main branch (fixes self-hosted runner state issues)
           fetch-depth: 0 # Fetch all history for proper gh-pages handling
+          clean: true # Ensure clean checkout
 
       - name: Setup Quarto (Native Windows)
         shell: pwsh
