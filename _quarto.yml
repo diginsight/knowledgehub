@@ -114,7 +114,7 @@ project:
 
 website:
   title: "Diginsight Team Knowledge Journey"
-  description: "Shared technical knowledge, conference insights, and development guides"
+  description: "Shared technical knowledge, conference insights, and development guides "
   site-url: "https://darioairoldi.github.io/Learn"
   repo-url: "https://github.com/darioairoldi/Learn"
   repo-actions: [edit, issue]
