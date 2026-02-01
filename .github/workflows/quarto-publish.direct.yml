@@ -139,6 +139,14 @@ jobs:
           Write-Host "Cleaning previous build artifacts..."
           Remove-Item -Recurse -Force .quarto -ErrorAction SilentlyContinue
           Remove-Item -Recurse -Force docs -ErrorAction SilentlyContinue
+          Remove-Item -Recurse -Force _freeze -ErrorAction SilentlyContinue
+          
+          # Also clean Quarto global cache
+          $quartoCache = Join-Path $env:LOCALAPPDATA "quarto"
+          if (Test-Path $quartoCache) {
+            Write-Host "Cleaning Quarto global cache at $quartoCache"
+            Remove-Item -Recurse -Force $quartoCache -ErrorAction SilentlyContinue
+          }
           
           Write-Host "Rendering Quarto project..."
           quarto render --to html
