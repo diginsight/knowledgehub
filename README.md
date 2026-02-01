@@ -1,5 +1,5 @@
 ---
-title: "Dario's Knowledge Journey"
+title: "Diginsight Team Knowledge Journey"
 subtitle: "A Shared Knowledge Base for Modern Software Development"
 date: last-modified
 author: "Dario Airoldi"
