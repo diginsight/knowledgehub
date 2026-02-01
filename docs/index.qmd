@@ -12,7 +12,7 @@ This is an experiment about **learning from AI**, **learning how to work with AI
 
 From 40+ **Build**, **Ignite** and **YouTube** sessions analysis to Azure production patterns, from prompt engineering techniques to real-world troubleshooting—**250+ articles where learning happens in the open**.
 
-## 📋 Quick Navigation
+## 📋 Quick Navigation 
 
 | Section | Description |
 |---------|-------------|
