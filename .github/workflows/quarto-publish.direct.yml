@@ -20,6 +20,19 @@ jobs:
     runs-on: self-hosted
 
     steps:
+      - name: Reset runner state
+        shell: pwsh
+        run: |
+          # Self-hosted runners keep state between runs
+          # The deploy step switches branches, corrupting subsequent checkouts
+          if (Test-Path ".git") {
+            Write-Host "Resetting runner git state..."
+            git fetch origin main --force
+            git checkout -B main origin/main --force
+            git clean -fdx
+            Write-Host "Runner state reset to origin/main"
+          }
+
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
