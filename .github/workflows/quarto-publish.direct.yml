@@ -148,8 +148,18 @@ jobs:
             Remove-Item -Recurse -Force $quartoCache -ErrorAction SilentlyContinue
           }
           
+          # Debug: Show what _quarto.yml contains
+          Write-Host "=== _quarto.yml website.title ==="
+          Get-Content "_quarto.yml" | Select-String -Pattern "title:" | Select-Object -First 2
+          Write-Host "=== End of title check ==="
+          
           Write-Host "Rendering Quarto project..."
           quarto render --to html
+          
+          # Debug: Show generated title in README.html
+          Write-Host "=== Generated README.html title ==="
+          Get-Content "docs/README.html" | Select-String -Pattern "<title>" | Select-Object -First 1
+          Write-Host "=== End of generated title check ==="
 
           Write-Host "Verifying output directory..."
           if (Test-Path "docs") {
