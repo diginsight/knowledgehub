@@ -1,0 +1,49 @@
+/* Custom styles for Learning Journey site */
+
+/* Dark blue navbar */
+.navbar {
+  background-color: #1a365d !important; /* Dark blue */
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .navbar-toggler-icon {
+  color: #ffffff !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #90cdf4 !important; /* Light blue on hover */
+}
+
+.navbar .dropdown-menu {
+  background-color: #2d4a6f;
+  border: none;
+}
+
+.navbar .dropdown-item {
+  color: #ffffff;
+}
+
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+  background-color: #1a365d;
+  color: #90cdf4;
+}
+
+/* Override Bootstrap highlight color to light yellow */
+:root {
+  --bs-highlight-bg: #fff7d1;
+}
+
+mark,
+.mark {
+  background-color: var(--bs-highlight-bg) !important;
+}
+
+/* Hide redundant h1 when it matches the page title */
+/* Only hide h1 that appears in the content AFTER the title block */
+#quarto-content .quarto-title-block ~ * h1:first-child,
+#quarto-content article > h1:first-of-type {
+  display: none !important;
+}

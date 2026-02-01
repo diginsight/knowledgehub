@@ -403,6 +403,11 @@ FodyWeavers.xsd
 !.vscode/launch.json
 !.vscode/extensions.json
 !.vscode/*.code-snippets
+!.vscode/extensions/
+
+# Built VS Code extension output
+.vscode/extensions/*/out/
+.vscode/extensions/*/node_modules/
 
 # Local History for Visual Studio Code
 .history/
@@ -416,3 +421,31 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Quarto build outputs (should NOT be versioned)
+.quarto/
+/.quarto/
+/_site/
+_freeze/
+/docs/
+
+# Generated HTML files (should NOT be versioned)
+*.html
+*.htm
+
+# Temporary build tools (should NOT be versioned)
+yq.exe
+
+# FAKE build system
+.fake
+
+# Note: navigation.json IS versioned (not ignored)
+# It's generated from _quarto.yml but should be committed to repo
+
+# MetadataWatcher Build Output
+.copilot/bin/
+src/MetadataWatcher/bin/
+src/MetadataWatcher/obj/
+
+**/*.quarto_ipynb
+/site_libs
