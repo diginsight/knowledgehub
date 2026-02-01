@@ -113,7 +113,7 @@ project:
     - "06.00-idea/learning-hub/02-documentation-taxonomy/01-learning-hub-documentation-taxonomy.md"
 
 website:
-  title: "Dario's Knowledge Journey"
+  title: "Diginsight Team Knowledge Journey"
   description: "Shared technical knowledge, conference insights, and development guides"
   site-url: "https://darioairoldi.github.io/Learn"
   repo-url: "https://github.com/darioairoldi/Learn"
