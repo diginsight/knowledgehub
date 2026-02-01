@@ -113,8 +113,8 @@ project:
     - "06.00-idea/learning-hub/02-documentation-taxonomy/01-learning-hub-documentation-taxonomy.md"
 
 website:
-  title: "Dario's Learning Journey"
-  description: "Technical learning notes, conference insights, and development guides"
+  title: "Diginsight Team Knowledge Journey"
+  description: "Shared technical knowledge, conference insights, and development guides "
   site-url: "https://darioairoldi.github.io/Learn"
   repo-url: "https://github.com/darioairoldi/Learn"
   repo-actions: [edit, issue]
@@ -126,7 +126,7 @@ website:
   navbar:
     background: primary
     search: true
-    title: "Learning Hub"
+    title: "Knowledge Hub"
     left:
       - icon: house-fill
         href: README.md
@@ -287,7 +287,7 @@ website:
       - text: "Ideas & Projects"
         menu:
           - href: "06.00-idea/learning-hub/01-learning-hub-overview/01-learning-hub-introduction.md"
-            text: "Learning Hub Overview"
+            text: "Knowledge Hub Overview"
       - icon: bell-fill
         href: "#"
         aria-label: "Intelligent Notifications"
@@ -306,9 +306,10 @@ website:
     search: false
     collapse-level: 3
     contents:
-      - text: "Home"
+      - href: README.md
+        text: "Home"
         icon: house-fill
-        href: "README.md"
+        contents: "06.00-idea/learning-hub/01-learning-hub-overview/*.md"
 
       - section: "News & Updates"
         icon: newspaper
@@ -420,7 +421,7 @@ website:
       - section: "Ideas & Projects"
         icon: lightbulb
         contents:
-          - section: "Learning Hub"
+          - section: "Knowledge Hub"
             icon: book-half
             contents: "06.00-idea/learning-hub/**/*.md"
 
