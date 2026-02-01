@@ -194,6 +194,9 @@ jobs:
           Copy-Item -Path ".gitignore.gh-pages" -Destination $tempDir -Force -ErrorAction SilentlyContinue
           Write-Host "✓ Saved build output to: $tempDir"
 
+          # Delete local gh-pages-deploy branch if it exists from previous run
+          git branch -D gh-pages-deploy 2>$null
+          
           # Create fresh orphan branch (no history = no case conflicts)
           git checkout --orphan gh-pages-deploy
 
@@ -226,13 +229,17 @@ jobs:
           git log -1 --oneline
           Write-Host "==="
           
-          # Delete remote gh-pages first to ensure fresh push
-          Write-Host "Deleting remote gh-pages branch..."
-          git push origin --delete gh-pages 2>$null
+          # Force push directly (don't delete first - just force update)
+          Write-Host "Force pushing to gh-pages..."
+          git push origin gh-pages-deploy:gh-pages --force --verbose 2>&1
           
-          # Push new content
-          Write-Host "Pushing new content to gh-pages..."
-          git push origin gh-pages-deploy:gh-pages --verbose 2>&1
+          # Verify push worked
+          Write-Host "Verifying push..."
+          git fetch origin gh-pages
+          $remoteCommit = git rev-parse origin/gh-pages
+          $localCommit = git rev-parse HEAD
+          Write-Host "Local commit: $localCommit"
+          Write-Host "Remote gh-pages commit: $remoteCommit"
 
           Write-Host "✓ Site deployed to gh-pages branch!"
 
